@@ -2,7 +2,6 @@ package com.rotpaddon.exampleaddon.client.render;
 
 import com.github.standobyte.jojo.action.stand.StandEntityAction;
 import com.github.standobyte.jojo.client.render.entity.model.stand.HumanoidStandModel;
-import com.github.standobyte.jojo.client.render.entity.model.stand.bb.BlockbenchStandModelHelper;
 import com.github.standobyte.jojo.client.render.entity.pose.IModelPose;
 import com.github.standobyte.jojo.client.render.entity.pose.ModelPose;
 import com.github.standobyte.jojo.client.render.entity.pose.RotationAngle;
@@ -12,18 +11,11 @@ import com.rotpaddon.exampleaddon.entity.ExampleStandEntity;
 
 import net.minecraft.client.renderer.model.ModelRenderer;
 
-// Made with Blockbench 4.8.1
-// Exported for Minecraft version 1.15 - 1.16 with Mojang mappings
-// Paste this class into your mod and generate all required imports
-
-
 public class ExampleStandModel extends HumanoidStandModel<ExampleStandEntity> {
     private ModelRenderer pickaxe;
 
 	public ExampleStandModel() {
 		super();
-		
-		BlockbenchStandModelHelper.fillFromBlockbenchExport(new ExampleStandModelBlockbench(), this);
 	}
 
 	@Override // TODO summon poses
