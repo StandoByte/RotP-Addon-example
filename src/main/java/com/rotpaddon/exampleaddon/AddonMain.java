@@ -3,12 +3,15 @@ package com.rotpaddon.exampleaddon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.rotpaddon.exampleaddon.capability.CapabilityHandler;
 import com.rotpaddon.exampleaddon.init.InitEntities;
 import com.rotpaddon.exampleaddon.init.InitSounds;
 import com.rotpaddon.exampleaddon.init.InitStands;
+import com.rotpaddon.exampleaddon.network.AddonPackets;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 // Your addon's main file
@@ -30,5 +33,12 @@ public class AddonMain {
         InitSounds.SOUNDS.register(modEventBus);
         InitStands.ACTIONS.register(modEventBus);
         InitStands.STANDS.register(modEventBus);
+        
+        modEventBus.addListener(this::preInit);
+    }
+    
+    private void preInit(FMLCommonSetupEvent event) {
+        AddonPackets.init();
+        CapabilityHandler.commonSetupRegister();
     }
 }
