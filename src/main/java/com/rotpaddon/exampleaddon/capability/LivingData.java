@@ -22,7 +22,7 @@ public class LivingData implements INBTSerializable<CompoundNBT> {
         if (!entity.level.isClientSide()) {
             /* 
              * Synchronize the data to the player's client and surrounding players' clients
-             * (i.e. if it isn't used when rendering the entity model):
+             * (i.e. if it is used for extra visual effects on the entity model):
              */
             AddonPackets.sendToClientsTrackingAndSelf(new TrPickaxesThrownPacket(entity.getId(), pickaxesThrown), entity);
             
@@ -47,12 +47,12 @@ public class LivingData implements INBTSerializable<CompoundNBT> {
     }
     
     
-    // Sync all the data that should be available to all players (mostly needed for rendering).
+    // Sync all the data that should be available to all players
     public void syncWithAnyPlayer(ServerPlayerEntity player) {
         AddonPackets.sendToClient(new TrPickaxesThrownPacket(entity.getId(), pickaxesThrown), player);
     }
     
-    // If there is data that should only be known to the player, and not to other ones, sync it here instead.
+    // Sync all the data that only this player needs to know
     public void syncWithEntityOnly(ServerPlayerEntity player) {
 //        AddonPackets.sendToClient(new SomeDataPacket(someDataField), player);
     }
