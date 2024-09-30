@@ -6,7 +6,7 @@ In this example we're adding a simple integer counter of how many pickaxes our e
 
 This branch also implements network packets, which are essential to synchronize data between server and clients.
 
-## New/changed files:
+## [New/changed files](https://github.com/StandoByte/RotP-Addon-example/compare/master...player-capability):
 - `AddonMain.java` - registering capabilities and network packets on FMLCommonSetupEvent event<br>
 - Entirety of `capability` package - the data being attached to players (`LivingData` class), and the code needed for it to work<br>
 - Entirety of `network` package - packets to send data between client and player<br>
