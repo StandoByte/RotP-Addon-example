@@ -7,5 +7,6 @@
   "action.myrotpaddon.example_stand_barrage": "Punch Barrage",
   "action.myrotpaddon.example_stand_block": "Block",
   "action.myrotpaddon.example_stand_throw_pickaxe": "Throw Pickaxe",
-  "entity.myrotpaddon.example_pickaxe": "Pickaxe"
+  "entity.myrotpaddon.example_pickaxe": "Pickaxe",
+  "example_pickaxes_thrown": "Pickaxes thrown: %s"
 }

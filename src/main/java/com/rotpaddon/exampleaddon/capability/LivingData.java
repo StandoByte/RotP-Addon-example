@@ -1,11 +1,14 @@
 package com.rotpaddon.exampleaddon.capability;
 
+import com.github.standobyte.jojo.client.ClientUtil;
 import com.rotpaddon.exampleaddon.network.AddonPackets;
 import com.rotpaddon.exampleaddon.network.s2c.TrPickaxesThrownPacket;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.util.INBTSerializable;
 
 public class LivingData implements INBTSerializable<CompoundNBT> {
@@ -39,6 +42,12 @@ public class LivingData implements INBTSerializable<CompoundNBT> {
             /*
              * Or, if that piece of data is only needed on the server, don't send it at all.
              */
+        }
+        else {
+            PlayerEntity player = ClientUtil.getClientPlayer();
+            if (player != null && entity == player) {
+                player.displayClientMessage(new TranslationTextComponent("example_pickaxes_thrown", pickaxes), true);
+            }
         }
     }
     
