@@ -1,22 +1,14 @@
-# RotP Example Addon
+# Mixins
 
-This repository is a template for you to use if you want to get started on making Stand addons for Ripples of the Past Minecraft mod.
+Since some addon devs are already using mixins, I am now obligated to make at least a short guide on them.
 
-There are multiple branches that cover some of the most requested/used features of Minecraft modding - if you want to use those in your addon but not sure how to implement those, check these branches out too. And feel free to suggest me to add more comments to a part of the code you don't understand, or cover another topic in a specific branch, in our [Discord](https://discord.gg/4GcjnMnXP4).
+Mixins are a very powerful modding tool, which lets the developer manipulate the Minecraft's code. As such, it should be used sparingly, when you are absolutely sure there is no other way to implement your feature. It is also harder to debug, so be aware of that.
 
-## Setting up the modding workspace
+I recommend you read the [official Mixin wiki](https://github.com/SpongePowered/Mixin/wiki) before you start working on them - it is a nice read, and it is essential to understand the concepts it describes. There is also a [Fabric Wiki](https://fabricmc.net/wiki/tutorial:mixin_introduction) on mixins - it also applies to Forge since the library is not dependent on a mod loader, it's just that Fabric mods rely on mixins more often.
 
-To set up the GitHub repository and not have to worry about that later, you can:
-- Fork this repository on your GitHub account (you can rename that fork to whatever you want).
-- Clone the fork created on your account to your PC.
+You can also technically mixin into the code of the main mod, but at least let me know what you are implementing, so that I can add a proper way of doing so into the next patch on RotP.
 
-There are guides on the Internet that cover the next steps more extensively, the only exception is that you would use this template instead of Forge's MDK. In short:
-- Install an IDE that you will be using for the development - two most common options are IntelliJ IDEA Community Edition and Eclipse.
-- In addition, make sure to install JDK 8 - it is needed to make mods for Minecraft 1.16.5. 
-    - Windows x64 download link: [https://javadl.oracle.com/webapps/download/GetFile/1.8.0_311-b11/4d5417147a92418ea8b615e228bb6935/windows-i586/jdk-8u311-windows-x64.exe](https://javadl.oracle.com/webapps/download/GetFile/1.8.0_311-b11/4d5417147a92418ea8b615e228bb6935/windows-i586/jdk-8u311-windows-x64.exe)
-- Open this template in your IDE (For Eclipse users - import it as a Gradle Project).
-- If you get an error after opening the project, try changing Gradle's Java Home path to the directory where Java 8 was installed (on Windows that should be C:\Program Files\Java\jdk1.8.0_311) in the project settings.
-
-## License
-
-[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) 
+## [New/changed files](https://github.com/StandoByte/RotP-Addon-example/compare/master...mixins):
+- `build.gradle` - adding the mixin library to the project<br>
+- `mixin` package - where all the mixin classes must be created<br>
+- `mixins.myrotpaddon.json` file (in `src/main/resources` directory) - all mixin classes will be defined in this file<br>
