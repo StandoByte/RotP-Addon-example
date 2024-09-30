@@ -19,4 +19,4 @@ There are guides on the Internet that cover the next steps more extensively, the
 
 ## License
 
-[GNU GLP v3.0](https://choosealicense.com/licenses/gpl-3.0/) 
+[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) 
