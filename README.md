@@ -12,3 +12,7 @@ You can also technically mixin into the code of the main mod, but at least let m
 - `build.gradle` - adding the mixin library to the project<br>
 - `mixin` package - where all the mixin classes must be created<br>
 - `mixins.myrotpaddon.json` file (in `src/main/resources` directory) - all mixin classes will be defined in this file<br>
+
+<b>When you add mixins into your project, don't forget to rerun the genIntellijRuns/genEclipseRuns (depending on your IDE) gradle task - the old .launch files that you might have generated will not work correctly.</b>
+
+### TODO - add a mixin example
