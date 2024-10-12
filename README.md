@@ -2,7 +2,7 @@
 
 This repository is a template for you to use if you want to get started on making Stand addons for Ripples of the Past Minecraft mod.
 
-There are multiple branches that cover some of the most requested/used features of Minecraft modding - if you want to use those in your addon but not sure how to implement those, check these branches out too. And feel free to suggest me to add more comments to a part of the code you don't understand, or cover another topic in a specific branch, in our [Discord](https://discord.gg/4GcjnMnXP4).
+There are multiple branches that cover some of the most requested/used features of Minecraft modding - if you want to use those in your addon but not sure how to implement those, check these branches out too. And feel free to DM me on [Discord](https://discord.gg/4GcjnMnXP4) if you want to suggest me to add more comments to a part of the code you don't understand, or cover another topic in a specific branch.
 
 ## Setting up the modding workspace
 
